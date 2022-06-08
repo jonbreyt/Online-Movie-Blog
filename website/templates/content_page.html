@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% block content %} 
+    <br>
+    <br>
+    <h1> {{ content.title }} </h1>
+    <p> {{ content.time }} </p>
+    <br>
+    <p> {{ content.intro }} </p>
+    <br>
+    <p> {{ content.body }} </p>
+    <br>
+    <p> {{ content.conclusion }} </p>
+    <br>
+    <p> {{ content.reference }} </p>
+    <form method = "POST">
+        <button style = "background-color: rgb(102, 255, 0)" name = "heart" class = "btn btn-success" id = "heart" formmethod = "POST">Heart</button>
+    </form>
+{% endblock %}

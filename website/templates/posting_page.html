@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+{% block content %}
+<br/>
+<br/>
+<h3 align = "center">Form to submit a posting</h3>
+<form method = "POST">
+    <div class="mb-3">
+        <label for="posting" class="form-label">Title</label>
+        <textarea name = "title" class="form-control" id = "title" rows="1"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="posting" class="form-label">Introduction</label>
+        <textarea name = "introduction" class="form-control" id = "introduction" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="posting" class="form-label">Body</label>
+        <textarea name = "body" class="form-control" id = "body" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="posting" class="form-label">Conclusion</label>
+        <textarea name = "conclusion" class="form-control" id="conclusion" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="posting" class="form-label">References</label>
+        <textarea name = "reference" class="form-control" id="reference" rows="1"></textarea>
+    </div>
+    <div>
+        <label for="category">Choose a category:</label>
+        <select name="category" id="category">
+            <option value="Other">Other</option>
+            <option value="Science">Science</option>
+            <option value="News">News</option>
+            <option value="Gaming">Gaming</option>
+        </select>
+    </div>
+
+    <button type = "submit" class = "btn btn-primary">Submit</button>
+</form>
+{% endblock %}

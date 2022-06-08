@@ -1,0 +1,79 @@
+{% extends "base.html" %} 
+{% block title %} Home {% endblock %} 
+{% block content %} 
+    <h3 align = "center"> Home Page! </h3>
+    <br>
+    <br>
+    <form method = "POST">
+            <p align = "center">Contents</p>
+            {% for contents in data %}
+              <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ contents.title }} </h5>
+                  <p class="card-text"> {{ contents.intro }} </p>
+                  <p class="card-text"><small class="text-muted"> {{ contents.time }} </small></p>
+                  <div class = "d-grid gap-2 col-6 mx-auto">
+                    <button class = "btn btn-warning" name = "viewmore" value = "plslogin" formmethod="POST"> View More </button>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}  
+            <p align = "center">Science</p>
+            {% for contents in science %}
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ contents.title }} </h5>
+                  <p class="card-text"> {{ contents.intro }} </p>
+                  <p class="card-text"><small class="text-muted"> {{ contents.time }} </small></p>
+                  <div class = "d-grid gap-2 col-6 mx-auto">
+                    <button class = "btn btn-warning" name = "viewmore" value = "plslogin" formmethod="POST"> View More </button>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            <p align = "center">News</p>  
+            {% for contents in news %}
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ contents.title }} </h5>
+                  <p class="card-text"> {{ contents.intro }} </p>
+                  <p class="card-text"><small class="text-muted"> {{ contents.time }} </small></p>
+                  <div class = "d-grid gap-2 col-6 mx-auto">
+                    <button class = "btn btn-warning" name = "viewmore" value = "plslogin" formmethod="POST"> View More </button>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}  
+            <p align = "center">Gaming</p>
+            {% for contents in gaming %}
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ contents.title }} </h5>
+                  <p class="card-text"> {{ contents.intro }} </p>
+                  <p class="card-text"><small class="text-muted"> {{ contents.time }} </small></p>
+                  <div class = "d-grid gap-2 col-6 mx-auto">
+                    <button class = "btn btn-warning" name = "viewmore" value = "plslogin" formmethod="POST"> View More </button>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}  
+            <p align = "center">Others</p>
+            {% for contents in other %}
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ contents.title }} </h5>
+                  <p class="card-text"> {{ contents.intro }} </p>
+                  <p class="card-text"><small class="text-muted"> {{ contents.time }} </small></p>
+                  <div class = "d-grid gap-2 col-6 mx-auto">
+                    <button class = "btn btn-warning" name = "viewmore" value = "plslogin" formmethod="POST"> View More </button>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}  
+    </form>
+{% endblock %}

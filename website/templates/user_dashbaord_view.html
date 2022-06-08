@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% block content %} 
+    <br>
+    <br>
+    <form method = "POST">
+        <p align = "center">Contents</p>
+        {% for contents in content %}
+          <div class="card mb-3">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> {{ contents.title }} </h5>
+              <p class="card-text"> {{ contents.intro }} </p>
+              <p class="card-text"><small class="text-muted"> {{ contents.time }} </small></p>
+              <div class = "d-grid gap-2 col-6 mx-auto">
+                <button class = "btn btn-danger" name = "delete" value = "{{ contents.content_id }}" formmethod = "POST"> Delete </button>
+                <button class = "btn btn-danger" name = "edit" value = "{{ contents.content_id }}" formmethod = "POST"> Edit </button>
+              </div>
+            </div>
+          </div>
+        {% endfor %} 
+    </form>
+{% endblock %}

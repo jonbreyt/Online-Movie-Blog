@@ -1,0 +1,54 @@
+{% extends "base.html" %} 
+{% block content %}
+<h1> Dashboard </h1>
+<br>
+<br>
+<form method = "POST">
+    <div class="card mb-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> Favorites </h5>
+        <div class = "d-grid gap-2 col-6 mx-auto">
+          <button class = "btn btn-success" name = "view" value = "Favorites" formmethod = "POST"> View </button>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> Science </h5>
+          <div class = "d-grid gap-2 col-6 mx-auto">
+            <button class = "btn btn-success" name = "view" value = "Science" formmethod = "POST"> View </button> </button>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> News </h5>
+        <div class = "d-grid gap-2 col-6 mx-auto">
+          <button class = "btn btn-success" name = "view" value = "News" formmethod = "POST"> View </button>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Gaming </h5>
+      <div class = "d-grid gap-2 col-6 mx-auto">
+        <button class = "btn btn-success" name = "view" value = "Gaming" formmethod = "POST"> View </button>
+    </div>
+  </div>
+</div>
+<div class="card mb-3">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> Others </h5>
+    <div class = "d-grid gap-2 col-6 mx-auto">
+      <button class = "btn btn-success" name = "view" value = "Other" formmethod = "POST"> View </button>
+  </div>
+</div>
+</div>
+</form>
+
+{% endblock %}

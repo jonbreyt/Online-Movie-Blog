@@ -1,0 +1,88 @@
+from . import db
+from flask_login import UserMixin 
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key = True) 
+    firstName = db.Column(db.String(50))
+    lastName = db.Column(db.String(50))
+    username = db.Column(db.String(50), unique = True)         
+    email = db.Column(db.String(100), unique = True) 
+    password = db.Column(db.String(100))
+
+class Contents(db.Model):
+    content_id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer)              
+    title = db.Column(db.String(1000))         
+    time = db.Column(db.Date)   
+    img = db.Column(db.String(1000))                
+    intro = db.Column(db.String(1000))
+    body = db.Column(db.String(1000))
+    conclusion = db.Column(db.String(1000))
+    reference = db.Column(db.String(1000))
+    upvotes = db.Column(db.Integer)
+    downvotes = db.Column(db.Integer)
+    contenttype = db.Column(db.String(1000))
+
+class Science(db.Model):
+    content_id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer)              
+    title = db.Column(db.String(1000))         
+    time = db.Column(db.Date)   
+    img = db.Column(db.String(1000))                
+    intro = db.Column(db.String(1000))
+    body = db.Column(db.String(1000))
+    conclusion = db.Column(db.String(1000))
+    reference = db.Column(db.String(1000))
+    upvotes = db.Column(db.Integer)
+    downvotes = db.Column(db.Integer)
+    contenttype = db.Column(db.String(1000))
+
+class News(db.Model):
+    content_id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer)              
+    title = db.Column(db.String(1000))         
+    time = db.Column(db.Date)   
+    img = db.Column(db.String(1000))                
+    intro = db.Column(db.String(1000))
+    body = db.Column(db.String(1000))
+    conclusion = db.Column(db.String(1000))
+    reference = db.Column(db.String(1000))
+    upvotes = db.Column(db.Integer)
+    downvotes = db.Column(db.Integer)
+    contenttype = db.Column(db.String(1000))
+
+class Other(db.Model):
+    content_id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer)              
+    title = db.Column(db.String(1000))         
+    time = db.Column(db.Date)   
+    img = db.Column(db.String(1000))                
+    intro = db.Column(db.String(1000))
+    body = db.Column(db.String(1000))
+    conclusion = db.Column(db.String(1000))
+    reference = db.Column(db.String(1000))
+    upvotes = db.Column(db.Integer)
+    downvotes = db.Column(db.Integer)
+    contenttype = db.Column(db.String(1000))
+
+class Gaming(db.Model):
+    content_id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer)              
+    title = db.Column(db.String(1000))         
+    time = db.Column(db.Date)   
+    img = db.Column(db.String(1000))                
+    intro = db.Column(db.String(1000))
+    body = db.Column(db.String(1000))
+    conclusion = db.Column(db.String(1000))
+    reference = db.Column(db.String(1000))
+    upvotes = db.Column(db.Integer)
+    downvotes = db.Column(db.Integer)
+    contenttype = db.Column(db.String(1000))
+
+class Fav (db.Model):   
+    content_id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer)              
+    title = db.Column(db.String(1000))         
+    time = db.Column(db.Date)   
+    img = db.Column(db.String(1000)) 
+    contenttype = db.Column(db.String(1000))
